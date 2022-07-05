@@ -1,0 +1,27 @@
+{
+  "name": "evolutionscript/crypto_api",
+  "description": "Get cryptocurrencies pair rate from popular exchangers.",
+  "license": "MIT",
+  "type": "library",
+  "keywords": [
+    "cryptocurrency",
+    "rate",
+    "exchange",
+    "bitcoin"
+  ],
+  "authors": [
+    {
+      "name": "EvolutionScript",
+      "homepage": "https://www.evolutionscript.com/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "EvolutionScript\\CryptocurrencyAPI\\": "src"
+    }
+  },
+  "require": {
+    "php": ">=7.4",
+    "guzzlehttp/guzzle": "^7.4.3"
+  }
+}
