@@ -20,32 +20,32 @@ class Exchange
 	public function rate($base,$to)
 	{
 		try{
-			$binance = new Binance();
-			return $binance->rate($base,$to);
+			$kucoin = new Kucoin();
+			return $kucoin->rate($base,$to);
 		}catch (\Exception $exception){
 			try{
-				$gemini = new Gemini();
-				return $gemini->rate($base,$to);
+				$bitfinex = new Bitfinex();
+				return $bitfinex->rate($base,$to);
 			}catch (\Exception $exception){
 				try{
-					$kraken = new Kraken();
-					return $kraken->rate($base,$to);
+					$bittrex = new Bittrex();
+					return $bittrex->rate($base,$to);
 				}catch (\Exception $exception){
 					try{
-						$kucoin = new Kucoin();
-						return $kucoin->rate($base,$to);
+						$gemini = new Gemini();
+						return $gemini->rate($base,$to);
 					}catch (\Exception $exception){
 						try{
 							$bybit = new ByBit();
 							return $bybit->rate($base,$to);
 						}catch (\Exception $exception){
 							try{
-								$bittrex = new Bittrex();
-								return $bittrex->rate($base,$to);
+								$kraken = new Kraken();
+								return $kraken->rate($base,$to);
 							}catch (\Exception $exception){
 								try{
-									$bitfinex = new Bitfinex();
-									return $bitfinex->rate($base,$to);
+									$binance = new Binance();
+									return $binance->rate($base,$to);
 								}catch (\Exception $exception){
 									throw new \Exception($exception->getMessage());
 								}
